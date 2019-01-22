@@ -1,0 +1,2621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="initial-scale=1.0">
+  <!--head content for map-->
+  <!-- <meta charset='utf-8' />-->
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <meta charset="utf-8">
+    <title>KML Layers</title>
+    <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 600px;
+      width: 800px;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+      </style>
+
+<!--InstanceBeginEditable name="head" -->
+<link
+href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/ZoczYAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/wAAAAAAAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAfppTK0BpAP8AAAAAAAAAAEBpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/AAAAAEBpAP9AaQD/QGkA/wAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAEBpAP8AAAAAQGkA/0BpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAaQD/QGkA/wAAAAAAAAAAAAAAAEBpAP9AaQD/QGkA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBpAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/QGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABC+/v8AAAAAQGkA/0BpAP9AaQD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/EL7+/xC+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7EEL7+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQvv7/jj8AAN8/AADbPwAA2z8AANE/AADFPwAAxj8AAM4/AAD/vwAA/38AAP8PAAD/owAA/88AAP/jAAD/+QAA//4AAA=="
+rel="icon" type="image/x-icon" />
+    <title>Mason Educational Flood Forecast System - George Mason University</title>
+    <!--InstanceEndEditable -->
+    <style type="text/css">
+@import url("https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/css/template.css");
+</style>
+
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+    <script src="https://masonfloodhazardsresearchlab.github.io/MasonFloodHazardsResearchLab.github.io/js/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+ <div id="page">
+      <div class="header">
+        <div id="title">
+          <p style="font-size: 22px "><b>Mason Educational Flood Forecast System</b></p>
+         <h5 style=" color:white">
+            <em>Powered by the Mason Flood Hazards Research Lab</em>
+          </h5>
+        </div>
+        <h2 id="mason-logo">
+          <a href="http://www.gmu.edu">George Mason University</a>
+        </h2>
+        <form method="get" action="http://search1.gmu.edu/search" id="search-form">
+          <div><label for="search">Search: </label><input type="text" name="q" id="search" maxlength="600" /> <input type="image" alt="Go" title="Go" src="main_page_images/search-box/go-button.gif" /><input type="hidden" name="site" value="mason_test" /><input type="hidden" name="client" value="mason_test" /><input type="hidden" name="proxystylesheet" value="mason_test" /><input type="hidden" name="output" value="xml_no_dtd" /></div>
+        </form>
+      </div>
+      <div>
+    </div>
+        <div class="tabs">
+		<ul>
+         <li >
+            <a href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/home.html">Home</a>
+			<ul>
+              <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/home.html">Chesapeake Bay Flood Forecast System powered by ADCIRC + NAM</a>
+              </li>
+         <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Potomac_flood_forecast_model_by_ADCIRC/index.html">Potomac River Flood Forecast System powered by ADCIRC + NAM </a>
+              </li>
+              <li>
+                <a href="https://slawler.github.io/nwm_pages/nwm_data_page.html">Tidal Water Prediction System</a>
+              </li>
+              <li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/potomac_total_water/index.html">Washington, DC Flood Forecast System</a>
+              </li>
+
+		<li>
+                <a href="https://masonfloodhazardsresearchlab.github.io/Dogue_Creek_Flood_Forecast_System/index.html">Dogue Creek Flood Forecast System powered by HEC-RAS & SWMM</a>
+              </li>
+			  
+            </ul>
+            
+          </li>
+          <li class="active">
+            <a href="plot.html">Time Series</a>
+           
+          </li>
+	   
+         <li >
+            <a href="test_ensemble.html">Ensemble Forecast</a>
+           
+          </li>	
+			
+	<li >
+            <a href="validation.html">Validation</a>
+           
+          </li>
+			
+		   <li>
+            <a href="movie.html">Animation</a>
+           
+          </li>
+		   <li>
+            <a href="map.html">Map</a>
+           
+          </li>
+		   <li>
+            <a href="models.html">Model</a>
+           
+          </li>
+		  <li>
+            <a href="GIS.html">GIS</a>
+           
+          </li>
+		
+          <li>
+            <a href="https://frg.vsnet.gmu.edu/">Our Lab</a>
+            
+          </li>
+         
+         
+        </ul>
+      </div>
+      <div class="column-row-adjacent">
+        <div class="column-1-1">
+<!--InstanceBeginEditable name="intro-photo" -->
+		 <p style="font-size: 17px"><b>
+<br/>
+iFLOOD: Chesapeake Bay Flood Forecast System powered by ADCIRC + NAM </b>
+</p>
+		
+<!--	-->
+		
+	
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+</style>
+</head>
+<body>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>Warning!</strong> System is currently migrating to new portal. Please follow this link <b><a target="_blank" href="http://iflood.vse.gmu.edu/map/" style="text-decoration:none;color: white;"> http://iflood.vse.gmu.edu/map/ </a></b>
+ 
+	</div>
+</body>					
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+<p style="font-size: 14px">Real-time water level time series forecasts for 84 hours are provided every 6 hours daily for the  AHPS/NOAA monitoring stations.
+<p style="font-size: 14px"> Mason Forecast System results are presented in green color titled <b style="font-size: 14px;color: green"> iFlood Forecast </b>
+ and are compared with NOAA official forecast models <b><a href="http://www.opc.ncep.noaa.gov/estofs/estofs_surge_info.shtml" style="text-decoration:none;color: blue;">  Extratropical Surge and Tide Operational Forecast System (ESTOFS) </a></b> , <b><a href="https://tidesandcurrents.noaa.gov/ofs/cbofs/cbofs_info.html" style="text-decoration:none;color: brown;"> Chesapeake Bay Operational Forecast System (CBOFS) </a></b>and <b><a href="http://www.opc.ncep.noaa.gov/et_surge/et_surge_info.shtml" style="text-decoration:none;color: purple;"> Extratropical Storm Surge Model (ETSS). </a></b> ETSS and ESTOFS systems uses <b><a href="http://mag.ncep.noaa.gov/model-guidance-model-parameter.php?group=Model%20Guidance&model=gfs&area=namer" style="text-decoration:none;color: black;">  Global Forecast System (GFS) </a></b> meteorological forcing to predict water levels. CBOFS is based on the National Weather Service (NWS)/Real Time Mesoscale Analysis (RTMA) winds (for the nowcast) and an interpolation of the NWS <b><a href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/north-american-mesoscale-forecast-system-nam" style="text-decoration:none;color: black;">  North American Mesoscale (NAM)-12 </a></b>  atmospheric forecast model data.  </p>
+
+<p style="font-size: 14px">National Weather Service (NWS) official forecast is presented in red color labeled <b style="font-size: 14px;color: red"> AHPS </b> and is also being validated with observed data from NOAA.
+
+<p style="font-size: 14px">
+GFS Forecast setup for the Chesapeake Bay can be found   <b><a target="_blank" href="GFS_display.html" style="text-decoration:none;"> here </a></b>
+</p>
+
+<p style="font-size: 14px">
+Download link for the current Model run and NOAA operational models can be accessed  <b><a target="_blank" href="https://github.com/MasonFloodHazardsResearchLab/MasonFloodHazardsResearchLab.github.io/tree/master/TabularData" style="text-decoration:none;"> here </a></b>
+</p>
+
+<p style="font-size: 14px">
+Forecasted Wind Speed and Direction are available here.  <b><a target="_blank" href="https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/wind.html" style="text-decoration:none;"> here </a></b>
+</p>
+		
+ 		
+
+<!--InstanceEndEditable -->
+
+
+<head>
+	<script src="plotly-latest.min.js"></script>
+</head>
+		</script>	
+</div><div>
+<p></p>
+
+	    
+	    <h4 style="font-size: 16px;color: green;text-align:center;">Water Levels Forecast for the next 84 hours </h4>
+
+	    <p style="color: black; text-align:center;font-size: 10px">Last model run updated at:<span id="myDate"></span><span id="myTime"></span></p>
+ 
+	 
+<body>
+
+
+		<div  id="myDiv" style="width:110%; height: 550px; align=center; left: 20%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/BISM2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  date_start_plot = rows[0].Time_observed;
+
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  date_now1_plot= rows[2].Time_adcirc;
+	  
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 0.25
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 0.25
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 0.25
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 0.25
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 0.25
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 0.25
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+		"spikedistance": "data",
+	"showcrossline": "true",
+	title:' Station: Bishop Head, BISM2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 3.9,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 3.7 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.4,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 4.2 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.5,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 5.3 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 7.3,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 7.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    
+   ,
+	{
+		x: date_now1_plot,
+		y:4,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+		{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+		
+		{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:3.7,
+		x1: 1,
+		y1: 4.2,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4.2,
+		x1: 1,
+		y1: 5.3,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.3,
+		x1: 1,
+		y1: 7,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:7,
+		x1: 1,
+		y1: 8,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		showspikes:true,
+		spikemode: "across",
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+	range: [date_start_plot,date_stop_plot],
+		
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 8],		
+	}
+};
+Plotly.newPlot('myDiv', data, layout,{displayModeBar: false});
+})
+	</script></div>	      
+
+<p style="font-size: 14px">
+Note: Click the legend to select/un-select model forecasts.
+</p>	
+	
+	
+
+		<div id="myDiv2" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/KPTV2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+    name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Station: Kiptopeke ,KPTV2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 4.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 4.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 5.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 5.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	},
+		    	{
+		x: date_now1_plot,
+		y:4,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+		
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4,
+		x1: 1,
+		y1: 4.5,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4.5,
+		x1: 1,
+		y1: 5.0,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.0,
+		x1: 1,
+		y1: 5.5,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.5,
+		x1: 1,
+		y1: 6,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 6],		
+	}
+};
+Plotly.newPlot('myDiv2', data, layout,{displayModeBar: false});
+})
+	</script></div>	      
+	
+	    
+
+
+		<div id="myDiv3" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/SLIM2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+    name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Station: Solomon Island ,SLIM2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 2.6,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 2.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 3.0,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 2.8 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 4.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 5.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    ,
+		    	{
+		x: date_now1_plot,
+		y:3,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+				
+		{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:2.5,
+		x1: 1,
+		y1: 2.8,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:2.8,
+		x1: 1,
+		y1: 4.0,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4.0,
+		x1: 1,
+		y1: 5.0,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.0,
+		x1: 1,
+		y1: 6,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 6],		
+	}
+};
+Plotly.newPlot('myDiv3', data, layout,{displayModeBar: false});
+})
+	</script></div>	      
+		
+	
+	
+
+
+
+		<div id="myDiv4" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/SWPV2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Station: Sewells Point ,SWPV2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.1,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 4.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 4.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 5.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 6.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 6.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    ,
+		    	{
+		x: date_now1_plot,
+		y:4,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+				
+		{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4,
+		x1: 1,
+		y1: 4.5,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4.5,
+		x1: 1,
+		y1: 5.5,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.5,
+		x1: 1,
+		y1: 6.5,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:6.5,
+		x1: 1,
+		y1: 7,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 7],		
+	}
+};
+Plotly.newPlot('myDiv4', data, layout,{displayModeBar: false});
+})
+	</script></div>	      
+		
+		
+	
+	
+
+	
+		<div id="myDiv5" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/BLTM2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Baltimore ,BLTM2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 2.7,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 2.5 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 3.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 3.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 5.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 6.0,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 6.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    ,
+		    	{
+		x: date_now1_plot,
+		y:3,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+		
+		{
+			
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:2.5,
+		x1: 1,
+		y1: 3,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:3,
+		x1: 1,
+		y1: 5.0,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.0,
+		x1: 1,
+		y1: 6.0,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:6.0,
+		x1: 1,
+		y1: 6.0,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 10,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 6],		
+	}
+};
+Plotly.newPlot('myDiv5', data, layout,{displayModeBar: false});
+})
+	</script></div>	      
+		
+		
+		
+
+
+		<div id="myDiv6" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/APAM2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var CBOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'CBOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'cbofs'),
+  line: {color: 'brown',
+	width: 1
+	},
+  marker: {color: 'brown',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, CBOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Station: Annapolis, APAM2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 2.1,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 2.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 2.6,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 2.4 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 3.5,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 3.3 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 6.0,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 6.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    ,
+		    	{
+		x: date_now1_plot,
+		y:3,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+			
+		{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:2,
+		x1: 1,
+		y1: 2.4,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:2.4,
+		x1: 1,
+		y1: 3.3,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:3.3,
+		x1: 1,
+		y1: 6,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:6,
+		x1: 1,
+		y1: 7,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 6],		
+	}
+};
+Plotly.newPlot('myDiv6', data, layout,{displayModeBar: false});
+})
+	</script></div>	      	
+	
+	
+	
+
+		
+
+
+		<div id="myDiv7" style="width:110%; height: 550px;align=center; left: 5%;">
+<script>
+Plotly.d3.tsv("https://masonfloodhazardsresearchlab.github.io/ches_bay_adcirc/WASD2.tsv", function(err, rows){
+  function unpack(rows, key) {
+	  	  date_start_plot = rows[0].Time_observed;
+
+date_stop_plot= rows[rows.length-1].Time_adcirc;
+	  	  date_now_plot= rows[0].Time_adcirc;
+	  	  date_now1_plot= rows[2].Time_adcirc;
+  return rows.map(function(row) { return row[key]; });
+}
+var iFLood = {
+  type: "scatter",
+  mode:'lines+markers',
+  name:'iflood',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'iflood'),
+  line: {color: '#008000',
+	width: 1
+	},
+  marker: {color: '#008000',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ETSS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ETSS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'etss'),
+  line: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  marker: {color: 'rgb(204, 0, 204)',
+	width: 1
+	},
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var AHPS = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'AHPS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_ahps'),
+  y: unpack(rows, 'ahps'),
+  line: {color: 'red',
+	width: 1
+	},
+  marker: {color: 'red',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var ESTOFS = {
+  type: "scatter",
+  mode: "lines",
+  name: 'ESTOFS',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_adcirc'),
+  y: unpack(rows, 'estofs'),
+  line: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},
+  marker: {color: 'rgb(0, 0, 255)',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var Observed = {
+  type: "scatter",
+  mode: "lines+markers",
+  name: 'Observed ',
+  hoverinfo: "y",
+  x: unpack(rows, 'Time_observed'),
+  y: unpack(rows, 'observed'),
+  line: {color: 'blue',
+	width: 1
+	},
+  marker: {color: 'blue',
+	width: 1
+	},	
+  xaxis: 'x1',
+  yaxis: 'y1'
+}
+var data = [iFLood,AHPS, ETSS, ESTOFS, Observed];
+var layout = {	
+	showlegend: true,
+		hovermode: "x",
+	title:' Station: Washington, D.C., APAM2',
+	legend: {"orientation": "h"},
+		  //"xanchor": "center"},
+		images: [
+		{
+		source:"https://masonfloodhazardsresearchlab.github.io/Xbeach/MasonM.png",
+		xref:"paper",
+		yref:"paper",
+		x: .87,
+		y: .985,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.75,
+		layer:"above"}],
+	    annotations:[
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 3.8,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Action: 3.7 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 4.4,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Minor: 4.2 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 5.5,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                          Moderate: 5.3 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+   ,
+	{
+		xref:"paper",
+		yref:"y",
+		x: 0,
+		y: 7.2,
+		sizex:0.25,
+		sizey:0.25,
+		opacity: 0.95,
+		layer:"above",
+		"xanchor":"center",
+		text:'                     Major: 7.0 ft',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+		    ,
+		    	{
+		x: date_now1_plot,
+		y:4,
+		opacity: 0.95,
+		textangle:-90,
+		layer:"above",
+		text:'Forecast Start',
+		font: {
+		color:"black"},
+		arrowhead:0,
+		ax:0,
+		ay:0
+	}
+    ],
+	
+	shapes: [
+			{
+		type: 'line',
+		layer: 'above',
+		x0: date_now_plot,
+		y0:-1,
+		x1: date_now_plot,
+		y1: 8,
+		fillcolor: 'rgb(0,0,0)',
+		opacity: 1.0,
+		line: {
+			width:1
+		}},
+		
+		
+		{
+		type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:-1,
+		x1: 1,
+		y1: 2.5,
+		fillcolor: '#ffffff',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:3.7,
+		x1: 1,
+		y1: 4.2,
+		fillcolor: '#f9f900',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:4.2,
+		x1: 1,
+		y1: 5.3,
+		fillcolor: '#ffa600',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:5.3,
+		x1: 1,
+		y1: 7,
+		fillcolor: 'rgb(255,0,0)',
+		opacity: 0.5,
+		line: {
+			width:0
+		}},
+		{type: 'rect',
+		layer: 'below',
+		xref:"paper",
+		yref:"y",
+		x0:0,
+		y0:7,
+		x1: 1,
+		y1: 8,
+		fillcolor: '#7c01a6',
+		opacity: 0.5,
+		line: {
+			width:0
+		}
+	}],
+	xaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		anchor: 'y1',
+    		nticks: 8,
+    		tickcolor: '#bfbfbf',
+		tickwidth: 4,
+		mirror: true,
+		range: [date_start_plot,date_stop_plot],
+	},
+	yaxis: {
+		showgrid: true,
+		gridcolor: '#bfbfbf',
+		gridwidth: .25,
+		linecolor: 'rgb(153, 153, 153)',
+		linewidth: 1,
+		tickwidth:.25,
+		tick0:0,
+		domain:[0, 1],
+		tickwidth:1,
+		nticks: 8,
+		mirror: true,
+		title: 'Stage (feet relative to MLLW)',
+		range: [-1, 8],		
+	}
+};
+Plotly.newPlot('myDiv7', data, layout,{displayModeBar: false});
+})
+	</script></div>	      	
+	
+		
+	
+	
+	    
+<div></div>
+<br>
+<div></div>
+<br>      
+ <div></div>
+<br>
+<div></div>
+<br>
+<div></div>
+<br>
+
+  
+  <!--End of main body content-->
+<br/><br/>
+	  
+	  
+      <div class="footer">
+	  <div>
+				
+<div >
+			<p ><b style='color:red'>Disclaimer: </b><br/>
+			The products provided here are for educational and scientific research only and should not be used for decision making in its present form. The models, methods and results published here are under constant testing, development and subject to educational and training exercises on real time.
+			</p>
+			</div>
+		</div>
+		<p>
+					<b><br />Social Connect!</b>
+				</p>
+			
+			 
+			<p > 
+			<a href="http://www.facebook.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on facebook"><img alt="follow me on facebook" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" /></a>
+			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<a href="https://www.youtube.com/channel/UCXExJRbcZMkS6J1L3rWv7Dw" style="line-height: 1.4;" target="_blank" title="follow me on youtube"><img alt="follow me on youtube" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" /></a><span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<span style="line-height: 1.4;">&nbsp;&nbsp;</span>
+			<a href="http://www.instagram.com/gmuferreira" style="line-height: 1.4;" target="_blank" title="follow me on instagram"><img alt="follow me on instagram" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" /></a>
+			<span style="line-height: 1.4;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+			<a href="https://twitter.com/FerreiraGMU" style="line-height: 1.4;" target="_blank" title="follow me on Twitter"><img alt="follow me on twitter" border="0" src="https://c866088.ssl.cf3.rackcdn.com/assets/twiiter30x30.png" /></a>&nbsp; &nbsp;
+			<a href="https://github.com/GMU-FerreiraResearchGroup" target="_blank"><img alt="" src="http://frg.vse.gmu.edu/documents/882235/962585/GitHub_Logo.png/21697fa0-6f7e-4760-b52f-267cdf3ed7c9?t=1434735565858" style="width: 80px; height: 33px;" /></a>
+			</p> 
+        
+        <p>Copyright Â© 2017 George Mason University</p>
+      </div>
+    </div>
+<script type="text/javascript">
+function confirm_alert(node) {
+    return confirm("Information: The data is a prediction on educational studies of past and present condition. Cannot be treated as real");
+}
+
+//code to update date and time
+//for date
+var date = new Date();
+var month = date.getMonth() + 1;
+var day = date.getDate();
+var year = date.getFullYear();
+if(month<10){
+  month = "0"+month;
+}
+if(day<10){
+  day = "0"+day;
+}
+//for time
+var time = new Date();
+//update date and time in html
+var setTime1 = "08";
+var setTime2 = "14";
+var setTime3 = "20";
+var setTime4 = "02";
+//Function to set date and time
+var setDateAndTime = function(){
+  var currentHour = new Date().getHours();
+    if(currentHour >= setTime1 && currentHour < setTime2){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime1 + ":00" + " (LST)");
+    }else if(currentHour >= setTime2 && currentHour < setTime3){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime2 + ":00" + " (LST)");
+    }else if(currentHour >= setTime3 && currentHour < setTime4 + 24){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime3 + ":00" + " (LST)");
+    }else if(currentHour>=setTime4){
+      $('#myDate').html(" " + month + '/' + day + '/' +  year);
+      $('#myTime').html(" " + setTime4 + ":00" + " (LST)");
+    }else{
+      $('#myDate').html(" " + month + '/' + (day-1) + '/' +  year);
+      $('#myTime').html(" " + setTime3 + ":00" + " (LST)");
+    }
+}
+$(document).ready(function(){   
+   setDateAndTime();
+}); 
+//calling function after every minute
+var setFunction = setInterval(setDateAndTime ,60000);
+</script>
+
+
+  </body>
+<!-- InstanceEnd -->
+</html>
